@@ -2,6 +2,7 @@ pragma solidity >=0.5.0;
 pragma experimental ABIEncoderV2;
 
 /// @title Multicall - Aggregate results from multiple read-only function calls
+///        this is a fork of the original that supports reverts
 /// @author Michael Elliot <mike@makerdao.com>
 /// @author Joshua Levine <joshua@makerdao.com>
 /// @author Nick Johnson <arachnid@notdot.net>
@@ -16,8 +17,9 @@ contract Multicall {
         returnData = new bytes[](calls.length);
         for(uint256 i = 0; i < calls.length; i++) {
             (bool success, bytes memory ret) = calls[i].target.call(calls[i].callData);
-            require(success);
-            returnData[i] = ret;
+            if (success) {
+                returnData[i] = ret;
+            }
         }
     }
     // Helper functions

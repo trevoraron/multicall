@@ -1,1 +1,14 @@
-/out
+.DS_Store
+build/
+node_modules/
+coverage/
+coverage.json
+package-lock.json
+.idea/
+artifacts/
+ganache-blockchain-log.txt
+.coverage_artifacts
+.coverage_contracts
+yarn-error.log
+@types/generated/
+cache/

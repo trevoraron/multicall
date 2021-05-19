@@ -9,15 +9,73 @@ and returning the block number the values are from (giving them important
 context so that results from old blocks can be ignored if they're from an
 out-of-date node).
 
-For use in front-end dapps, this smart contract is intended to be used with
-[Multicall.js](https://github.com/makerdao/multicall.js).
+This is a fork of the original hosted here (https://github.com/makerdao/multicall)
+it supports contract reverts -- if one contract reverts we still get the results of 
+other calls
 
-### Contract Addresses
-| Chain   | Address |
-| ------- | ------- |
-| Mainnet | [0xeefba1e63905ef1d7acba5a8513c70307c1ce441](https://etherscan.io/address/0xeefba1e63905ef1d7acba5a8513c70307c1ce441#contracts) |
-| Kovan   | [0x2cc8688c5f75e365aaeeb4ea8d6a480405a48d2a](https://kovan.etherscan.io/address/0x2cc8688c5f75e365aaeeb4ea8d6a480405a48d2a#contracts) |
-| Rinkeby | [0x42ad527de7d4e9d9d011ac45b31d8551f8fe9821](https://rinkeby.etherscan.io/address/0x42ad527de7d4e9d9d011ac45b31d8551f8fe9821#contracts) |
-| Görli   | [0x77dca2c955b15e9de4dbbcf1246b4b85b651e50e](https://goerli.etherscan.io/address/0x77dca2c955b15e9de4dbbcf1246b4b85b651e50e#contracts) |
-| Ropsten | [0x53c43764255c17bd724f74c4ef150724ac50a3ed](https://ropsten.etherscan.io/address/0x53c43764255c17bd724f74c4ef150724ac50a3ed#code) |
-| xDai    | [0xb5b692a88bdfc81ca69dcb1d924f59f0413a602a](https://blockscout.com/poa/dai/address/0xb5b692a88bdfc81ca69dcb1d924f59f0413a602a) |
+This fork also refactors the original Multicall code to use HardHat instead of
+DappHub tools
+
+## Setup
+
+Requirements:
+
+- Node >= v12
+- Yarn
+
+```
+$ npm i -g yarn       # Install yarn if you don't already have it
+$ yarn install        # Install dependencies
+$ yarn setup          # Setup Git hooks
+```
+
+## Linting and Formatting
+
+To check code for problems:
+
+```
+$ yarn typecheck      # Type-check TypeScript code
+$ yarn lint           # Check JavaScript and TypeScript code
+$ yarn lint --fix     # Fix problems where possible
+$ yarn solhint        # Check Solidity code
+```
+
+To auto-format code:
+
+```
+$ yarn fmt
+```
+
+## TypeScript type definition files for the contracts
+
+To generate type definitions:
+
+```
+$ yarn compile && yarn typechain
+```
+
+## Testing
+
+First, make sure Ganache is running.
+
+```
+$ yarn ganache
+```
+
+Run all tests:
+
+```
+$ yarn test
+```
+
+To run tests in a specific file, run:
+
+```
+$ yarn test [path/to/file]
+```
+
+To run tests and generate test coverage, run:
+
+```
+$ yarn coverage
+```

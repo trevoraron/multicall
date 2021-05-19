@@ -1,0 +1,11 @@
+{
+  "compilerVersion": "./node_modules/solc",
+  "compilerOptions": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 1000000
+    }
+  },
+  "sourceDirectory": "./contracts",
+  "outputDirectory": "./build"
+}
