@@ -12,3 +12,4 @@ ganache-blockchain-log.txt
 yarn-error.log
 @types/generated/
 cache/
+.env
