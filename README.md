@@ -1,4 +1,4 @@
-# Multicall <img width="100" align="right" alt="Multicall" src="https://user-images.githubusercontent.com/304108/55666937-320cb180-5888-11e9-907b-48ba66150523.png" />
+# Multicall 
 
 Multicall aggregates results from multiple contract constant function calls.
 
