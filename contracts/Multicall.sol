@@ -3,6 +3,7 @@ pragma experimental ABIEncoderV2;
 
 /// @title Multicall - Aggregate results from multiple read-only function calls
 ///        this is a fork of the original that supports reverts
+/// @author Trevor Aron <trevor.aron@coinbase.com>
 /// @author Michael Elliot <mike@makerdao.com>
 /// @author Joshua Levine <joshua@makerdao.com>
 /// @author Nick Johnson <arachnid@notdot.net>
