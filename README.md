@@ -1,4 +1,4 @@
-# Multicall 
+# Multicall
 
 Multicall aggregates results from multiple contract constant function calls.
 
@@ -9,16 +9,17 @@ and returning the block number the values are from (giving them important
 context so that results from old blocks can be ignored if they're from an
 out-of-date node).
 
-This is a fork of the original hosted here (https://github.com/makerdao/multicall)
-it supports contract reverts -- if one contract reverts we still get the results of 
-other calls
+This is a fork of the original hosted here
+(https://github.com/makerdao/multicall) it supports contract reverts -- if one
+contract reverts we still get the results of other calls
 
 This fork also refactors the original Multicall code to use HardHat instead of
 DappHub tools
 
 # Contracts
 
-ropsten: https://ropsten.etherscan.io/address/0xa8D99c12dC838CbFD83d27Ea7cd68866ba2f7cE3#code
+ropsten:
+https://ropsten.etherscan.io/address/0xa8D99c12dC838CbFD83d27Ea7cd68866ba2f7cE3#code
 
 ## Setup
 

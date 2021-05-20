@@ -1,4 +1,4 @@
-pragma solidity >=0.5.0;
+pragma solidity >=0.7.6;
 pragma experimental ABIEncoderV2;
 
 /// @title TestContract -- to test the Multicall Contract
@@ -13,8 +13,8 @@ contract TestContract {
         broke = isBroke;
     }
 
-    function getVal() public view returns (uint256) { 
+    function getVal() public view returns (uint256) {
         require(!broke, "broken");
-        return val; 
+        return val;
     }
 }
